@@ -17,6 +17,7 @@ public class DoctorInfoController {
     @Autowired
     DoctorInfoMapper doctorInfoMapper;
 
+    //初始化医生信息登记页面
     @RequestMapping("/doctorinfo")
     public InitDoctor hasInfo(){
         System.out.println("收到医生信息页面初始化请求。");
@@ -39,6 +40,7 @@ public class DoctorInfoController {
         }
     }
 
+    //录入医生信息
     @PostMapping("/submitdoctorinfo")
     public Result submitInfo(@RequestBody Doctor doctor){
         System.out.println("开始录入医生信息。");
@@ -54,6 +56,7 @@ public class DoctorInfoController {
         }
     }
 
+    //删除某条医生信息
     @PostMapping("/deletedoctorinfo")
     public Result deleteDoctorInfo(@RequestBody Doctor doctor){
         System.out.println("收到医生记录删除请求。");

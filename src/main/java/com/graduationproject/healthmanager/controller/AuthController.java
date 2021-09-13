@@ -15,6 +15,7 @@ public class AuthController {
     @Autowired
     AuthUserMapper authUserMapper;
 
+    //处理登录后的结果
     @PostMapping("/auth")
     public LoginResult auth(@RequestBody User user) {
         System.out.println("username:"+ user.getUsername());
@@ -35,6 +36,7 @@ public class AuthController {
         return new LoginResult(100, user.getUsername()+"/"+user.getPassword(),"success!");
     }
 
+    //处理修改密码请求
     @PostMapping("/changepaswd")
     public Result changePaswd(@RequestBody Password password){
         System.out.println("收到密码修改请求。");
@@ -54,6 +56,7 @@ public class AuthController {
         }
     }
 
+    //初始化页面
     @RequestMapping("/home")
     public ResultWithTips homeName(){
         System.out.println("收到了home请求。返回用户信息给前端。");

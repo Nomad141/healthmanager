@@ -28,6 +28,7 @@ public class PDFController {
     @Autowired
     HealthInfoMapper healthInfoMapper;
 
+    //生成pdf格式的健康报告，放到之前准备好的pdf模板中。该处有参考。
     @GetMapping("/pdf")
     @ResponseBody
     public PDFResult createPDF() throws Exception{
@@ -71,6 +72,7 @@ public class PDFController {
         return new PDFResult(111,"健康报告pdf成功生成，可以下载保存了","F:/TestData/PDFs/"+newPath);
     }
 
+    //下载报告
     @RequestMapping("/download")
     @ResponseBody
     public String download(HttpServletResponse response)throws IOException {

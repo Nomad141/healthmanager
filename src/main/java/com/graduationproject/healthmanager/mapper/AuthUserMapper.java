@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+//用户的注册登录验证等功能所要用到的数据库接口
 public interface AuthUserMapper {
     @Select("SELECT * FROM USERS")
     List<User> getAllUser();

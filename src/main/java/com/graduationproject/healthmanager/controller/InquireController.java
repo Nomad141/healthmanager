@@ -28,6 +28,7 @@ public class InquireController {
     @Autowired
     HabitsMapper habitsMapper;
 
+    //在查询页面点击查询个人信息
     @RequestMapping("/findpersonalinfo")
     public Result findPersonalInfo(){
         System.out.println("开始返回个人信息。");
@@ -86,7 +87,7 @@ public class InquireController {
             return new Result(999,e.getMessage());
         }
     }
-
+    //查询医生信息
     @RequestMapping("/finddoctorinfo")
     @ResponseBody
     public List<Doctor> findDoctorInfo(){
@@ -106,6 +107,7 @@ public class InquireController {
         }
     }
 
+    //查询健康史信息
     @RequestMapping("/findhistoryinfo")
     public List<HealthHistory> findHistoryInfo(){
         System.out.println("开始返回健康史信息。");
@@ -125,6 +127,7 @@ public class InquireController {
         }
     }
 
+    //查询医疗记录信息
     @RequestMapping("/findtreatinfo")
     public List<TreatHistory> findTreatInfo(){
         System.out.println("开始返回医疗记录信息。");
@@ -144,6 +147,7 @@ public class InquireController {
         }
     }
 
+    //查询保健计划信息
     @RequestMapping("/findplan")
     public List<Plan> findPlan(){
         System.out.println("开始返回保健计划信息。");

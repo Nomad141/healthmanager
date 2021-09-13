@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
-
+//医生信息相关功能要用到的数据库接口
 public interface DoctorInfoMapper {
 
     @Select("SELECT * FROM DOCTOR WHERE treatuser=#{userName}")

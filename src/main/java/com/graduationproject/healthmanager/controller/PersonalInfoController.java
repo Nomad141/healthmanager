@@ -22,6 +22,7 @@ public class PersonalInfoController {
     @Autowired
     AuthUserMapper authUserMapper;
 
+    //初始化个人信息页面
     @RequestMapping("/personalinfo")
     public InitPersonal hasInfo(){
         System.out.println("收到个人信息页面初始化请求。返回信息是否已经登记。");

@@ -4,6 +4,7 @@ import com.graduationproject.healthmanager.model.User;
 import org.apache.ibatis.annotations.*;
 
 
+//登记的个人信息要用到的数据库接口
 public interface PersonalInfoMapper {
 
     @Select("SELECT HASINFO FROM USERS WHERE USERNAME = #{name}")

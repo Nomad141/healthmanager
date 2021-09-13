@@ -8,6 +8,7 @@ import org.omg.CORBA.portable.ValueOutputStream;
 
 import java.util.List;
 
+//健康信息要用到的数据库接口
 public interface HealthInfoMapper {
 
     //HealthHistory

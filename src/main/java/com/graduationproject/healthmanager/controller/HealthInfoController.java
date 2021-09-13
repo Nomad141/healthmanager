@@ -16,6 +16,7 @@ public class HealthInfoController {
     @Autowired
     HealthInfoMapper healthInfoMapper;
 
+    //录入健康史
     @PostMapping("/submithistoryinfo")
     public Result submitHistoryInfo(@RequestBody HealthHistory healthHistory){
         System.out.println("开始录入健康史信息。");
@@ -31,6 +32,7 @@ public class HealthInfoController {
         }
     }
 
+    //删除一条健康史信息
     @PostMapping("/deletehistory")
     public Result deleteHistory(@RequestBody HealthHistory history){
         System.out.println("收到删除健康史请求。");
@@ -46,6 +48,7 @@ public class HealthInfoController {
         }
     }
 
+    //录入一条医疗记录
     @PostMapping("/submittreatinfo")
     public Result submitTreatInfo(@RequestBody TreatHistory treatHistory){
         System.out.println("开始录入医疗记录信息。");
@@ -61,6 +64,7 @@ public class HealthInfoController {
         }
     }
 
+    //删除一条医疗记录
     @PostMapping("/deletetreat")
     public Result deleteTreat(@RequestBody TreatHistory treatHistory){
         System.out.println("收到删除诊疗史请求。");
@@ -76,6 +80,7 @@ public class HealthInfoController {
         }
     }
 
+    //录入一条保健计划
     @PostMapping("/submitplaninfo")
     public Result submitPlanInfo(@RequestBody Plan plan){
         System.out.println("开始录入保健计划信息。");
@@ -91,6 +96,7 @@ public class HealthInfoController {
         }
     }
 
+    //删除一条保健计划
     @PostMapping("/deleteplan")
     public Result deletePlan(@RequestBody Plan plan){
         System.out.println("收到删除保健计划请求。");
@@ -106,6 +112,7 @@ public class HealthInfoController {
         }
     }
 
+    //初始化整个健康页面，如果数据库中已经有内容要返回显示。
     @RequestMapping("/inithealth")
     public InitHealth initHealth(){
         System.out.println("收到健康情况记录页面初始化请求。");

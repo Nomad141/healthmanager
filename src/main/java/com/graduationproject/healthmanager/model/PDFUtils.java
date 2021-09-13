@@ -22,6 +22,7 @@ public class PDFUtils {
      * @param resultMap 包含文件字段名和值的map
      * @return 生成的文件字节流
      */
+    //这个类中的方法参考自CSDN。
     public static ByteArrayOutputStream createPdfStream(String templateFilePath, String templateFileName,
                                                         Map<String, String> resultMap){
 
